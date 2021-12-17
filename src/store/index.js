@@ -3,7 +3,8 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
     counter: 0,
-    name: ''
+    name: '',
+    colorCode:'red'
   },
   mutations: {
     increaseCounter(state){
@@ -15,6 +16,9 @@ export default createStore({
     showName(state, name){
       console.log(name);
       state.name = name
+    },
+    setColorCode(state, newValue){
+      state.colorCode = newValue
     }
   },
   actions: {
