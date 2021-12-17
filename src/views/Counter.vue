@@ -1,28 +1,32 @@
 <template>
   <div class="counter">
-    {{counter}}
+<!--    {{counter}}-->
+    {{$store.state.counter}}
   </div>
   <div class="buttons">
-    <button @click="decreaseCounter">-</button>
-    <button @click="increaseCounter">+</button>
+<!--!    dc actiunea vine din mutations => commit-->
+    <button @click="$store.commit('decreaseCounter')">-</button>
+    <button @click="$store.commit('increaseCounter')">+</button>
+<!--    <button @click="decreaseCounter">-</button>-->
+<!--    <button @click="increaseCounter">+</button>-->
   </div>
 </template>
 
 <script>
 export default {
   name: "Counter",
-  data(){
-    return {
-      counter: 0
-    }
-  },
+  // data(){
+  //   return {
+  //     counter: 0
+  //   }
+  // },
   methods: {
-    increaseCounter(){
-      this.counter++
-    },
-    decreaseCounter(){
-      this.counter--
-    }
+    // increaseCounter(){
+    //   this.counter++
+    // },
+    // decreaseCounter(){
+    //   this.counter--
+    // }
   }
 };
 </script>
