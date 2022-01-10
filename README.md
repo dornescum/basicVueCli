@@ -1,4 +1,3 @@
-# modal-ninja
 
 ## Project setup
 ```
